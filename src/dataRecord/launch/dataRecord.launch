@@ -1,0 +1,9 @@
+<launch>
+  <!-- 载入参数到参数服务器 -->
+  <rosparam command="load" ns="n_data_record" file="$(find n_data_record)/config/config.yaml"/>
+  <!-- 启动节点 -->
+  <node name="n_data_record" pkg="n_data_record" type="n_data_record" output="screen" />
+  <node name="n_data_update" pkg="n_data_record" type="n_data_update" output="screen" />
+  <node name="n_data_backup" pkg="n_data_record" type="n_data_backup" output="screen" />
+
+</launch>

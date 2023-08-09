@@ -1,0 +1,14 @@
+# config.yaml
+
+bag_path: /home/h/Code/WS/data #数据存储路径()
+backup_path: /home/h/Code/WS/backup #异常数据存储路径
+
+data_partition: 2  # 数据划分方式：固定时长(1)或者固定大小（2）生成bag包
+bag_size: 500 #如果采用固定大小，每个包的大小（MB）
+bag_duration: 5 #如果采用固定时长，每个包的持续时间(秒)
+topic_names:
+  - /rslidar_points   #需要订阅的话题名称
+
+
+check_interval: 10 #多久检查文件夹大小是否超过限制（s）
+max_folder_size: 20 # 数据文件夹的保存限制（MB） 整数
